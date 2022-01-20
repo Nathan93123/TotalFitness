@@ -1,20 +1,29 @@
 package net.kisangan.totalfitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import net.kisangan.totalfitness.data.LoginDataSource;
+import net.kisangan.totalfitness.data.LoginRepository;
+import net.kisangan.totalfitness.data.model.LoggedInUser;
 import net.kisangan.totalfitness.databinding.ActivityMainBinding;
+import net.kisangan.totalfitness.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private LoginRepository instance;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +38,27 @@ public class MainActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        instance = LoginRepository.getInstance(new LoginDataSource());
     }
 
+    ActivityResultLauncher<Void> mGetUser = registerForActivityResult(new GetLoggedInUser(),
+        new ActivityResultCallback<String>() {
+            @Override
+            public void onActivityResult(String user) {
+                // Handle the returned logged user
+                System.out.println("User: "+user +" Logged in");
+            }
+    });
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (!instance.isLoggedIn()) {
+          mGetUser.launch(null);
+        }
+    }
 }
