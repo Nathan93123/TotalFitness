@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Parcelable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -25,9 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.kisangan.totalfitness.R;
-import net.kisangan.totalfitness.data.model.LoggedInUser;
-import net.kisangan.totalfitness.ui.login.LoginViewModel;
-import net.kisangan.totalfitness.ui.login.LoginViewModelFactory;
 import net.kisangan.totalfitness.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
