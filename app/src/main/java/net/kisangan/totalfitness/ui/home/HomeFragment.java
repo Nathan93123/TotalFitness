@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import net.kisangan.totalfitness.R;
 import net.kisangan.totalfitness.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
