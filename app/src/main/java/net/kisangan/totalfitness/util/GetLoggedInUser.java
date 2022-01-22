@@ -1,4 +1,4 @@
-package net.kisangan.totalfitness;
+package net.kisangan.totalfitness.util;
 
 import android.app.Activity;
 import android.content.Context;
