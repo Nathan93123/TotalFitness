@@ -6,6 +6,9 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="prompt_current_password">Current password</string>
+    <string name="prompt_verify_password">Verify password</string>
+    <string name="prompt_new_password">New password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
@@ -13,4 +16,14 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="main_toolbar_title">Total Fitness</string>
+    <string name="profile_menu_item">Profile</string>
+    <string name="choose_mass_unit">Default mass unit</string>
+    <string name="height">Height</string>
+    <string name="age">Age</string>
+    <string name="physical_activity_level">Physical activity level</string>
+    <string name="target_weight">Target weight</string>
+    <string name="current_weight">Current weight</string>
+    <string name="currrent_bmi">BMI</string>
+    <string name="update_crendenitals">Update crendenitals</string>
+    <string name="update_crendenitals_button">Update</string>
 </resources>

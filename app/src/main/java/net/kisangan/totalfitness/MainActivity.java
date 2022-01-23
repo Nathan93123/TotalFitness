@@ -1,9 +1,9 @@
 package net.kisangan.totalfitness;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -14,11 +14,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import net.kisangan.totalfitness.data.LoginDataSource;
 import net.kisangan.totalfitness.data.LoginRepository;
-import net.kisangan.totalfitness.data.model.LoggedInUser;
 import net.kisangan.totalfitness.databinding.ActivityMainBinding;
-import net.kisangan.totalfitness.ui.login.LoginActivity;
+import net.kisangan.totalfitness.util.GetLoggedInUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,26 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         instance = LoginRepository.getInstance(new LoginDataSource());
+    }
+
+    // Menu icons are inflated just as they were with actionbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_toolbar_nav_menu, menu);
+
+        return true;
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        if (item.getItemId() == R.id.profile_menu_item) {
+            navController.navigate(R.id.action_navigation_home_to_physicalHealthFragment);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     ActivityResultLauncher<Void> mGetUser = registerForActivityResult(new GetLoggedInUser(),

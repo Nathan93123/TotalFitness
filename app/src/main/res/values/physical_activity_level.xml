@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="physical_activity_level_array">
+        <item>Sedentary</item>
+        <item>extremely inactive</item>
+        <item>moderately active</item>
+        <item>vigorously active</item>
+        <item>extremely active</item>
+    </string-array>
+</resources>

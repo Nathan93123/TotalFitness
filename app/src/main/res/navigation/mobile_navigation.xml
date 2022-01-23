@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="net.kisangan.totalfitness.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_physicalHealthFragment"
+            app:destination="@id/physicalHealthFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,10 @@
         android:name="net.kisangan.totalfitness.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/physicalHealthFragment"
+        android:name="net.kisangan.totalfitness.ui.physicalhealth.PhysicalHealthFragment"
+        android:label="fragment_physical_health"
+        tools:layout="@layout/fragment_physical_health" />
 </navigation>
