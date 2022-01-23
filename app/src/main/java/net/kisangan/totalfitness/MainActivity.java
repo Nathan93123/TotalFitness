@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         if (item.getItemId() == R.id.profile_menu_item) {
-            navController.navigate(R.id.action_navigation_home_to_physicalHealthFragment);
+            navController.navigate(R.id.physicalHealthFragment);
             return true;
         }
         return super.onOptionsItemSelected(item);
