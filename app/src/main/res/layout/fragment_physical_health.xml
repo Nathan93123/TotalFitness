@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/update_crendenitals"
+        android:text="@string/title_update_credentials"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,7 +151,7 @@
             android:layout_marginStart="44dp"
             android:layout_marginTop="8dp"
             android:minHeight="48dp"
-            android:text="@string/update_crendenitals_button"
+            android:text="@string/action_update_credentials"
             android:visibility="gone"
             tools:visibility="visible" />
     </LinearLayout>

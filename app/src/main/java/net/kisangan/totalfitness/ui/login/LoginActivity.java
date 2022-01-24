@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import net.kisangan.totalfitness.R;
 import net.kisangan.totalfitness.databinding.ActivityLoginBinding;
+import net.kisangan.totalfitness.ui.registration.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -134,5 +135,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    public void signUp(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

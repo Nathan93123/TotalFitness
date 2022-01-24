@@ -9,7 +9,7 @@
     <string name="prompt_current_password">Current password</string>
     <string name="prompt_verify_password">Verify password</string>
     <string name="prompt_new_password">New password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
@@ -23,7 +23,11 @@
     <string name="physical_activity_level">Physical activity level</string>
     <string name="target_weight">Target weight</string>
     <string name="current_weight">Current weight</string>
-    <string name="currrent_bmi">BMI</string>
-    <string name="update_crendenitals">Update crendenitals</string>
-    <string name="update_crendenitals_button">Update</string>
+    <string name="current_bmi">BMI</string>
+    <string name="title_update_credentials">Update credentials</string>
+    <string name="action_update_credentials">Update</string>
+    <string name="action_signup">Sign up</string>
+    <string name="prompt_reg_username">username</string>
+    <string name="prompt_reg_email">e-mail</string>
+    <string name="action_cancel_signup">Cancel</string>
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TotalFitness">
         <activity
+            android:name=".ui.registration.RegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login" />
