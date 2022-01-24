@@ -30,4 +30,5 @@
     <string name="prompt_reg_username">username</string>
     <string name="prompt_reg_email">e-mail</string>
     <string name="action_cancel_signup">Cancel</string>
+    <string name="prompt_reg_password">Enter password</string>
 </resources>
